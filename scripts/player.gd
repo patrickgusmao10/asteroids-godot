@@ -45,7 +45,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-	var screen_size = get_viewport_rect().size
+	var screen_size = Vector2(1280, 720)
 	if global_position.y < 0:
 		global_position.y = screen_size.y
 	elif global_position.y > screen_size.y:
