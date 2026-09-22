@@ -4,16 +4,15 @@ A recreation of the classic **Asteroids** arcade experience, built from scratch 
 
 This project was developed as a hands-on game development study, focusing on 2D movement, physics, collision detection, shooting mechanics, asteroid spawning, UI, scoring, lives, and game state management.
 
-> 🎮 Recreated from scratch while following **How To Make Asteroids in Godot 4 (Complete Tutorial)**.
+> 🎮 Recreated from scratch while following **[How To Make Asteroids in Godot 4 (Complete Tutorial)](https://www.youtube.com/watch?v=FmIo8iBV1W8)**.
 
 ---
 
 ## 🎮 Play the Game
 
-🌐 **Web version coming soon!**
+### 🚀 [PLAY NOW — Launch Asteroids](https://patrickgusmao10.github.io/asteroids-godot/)
 
-The game will be available directly in the browser through GitHub Pages.
-
+Play the game directly in your browser — no installation required.
 ---
 
 ## 🚀 About the Project
@@ -291,19 +290,6 @@ project.godot
 ```
 
 6. Open the project and press **F6/F5** to run the game.
-
----
-
-## 🎓 Learning Reference
-
-This project was recreated from scratch while following the tutorial:
-
-**How To Make Asteroids in Godot 4 (Complete Tutorial)**  
-**Kaan Alpar**
-
-https://www.youtube.com/watch?v=FmIo8iBV1W8
-
-The tutorial was used as a learning resource and reference throughout the development of the project.
 
 ---
 
