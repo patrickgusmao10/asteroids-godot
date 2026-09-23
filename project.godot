@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Asteroids"
-run/main_scene="uid://btfqtafr1ouyo"
+config/name="Asteroids (teste)"
+run/main_scene="uid://cbtmtfn8yp4cv"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameData="*uid://56x7ydd8f15a"
 
 [display]
 

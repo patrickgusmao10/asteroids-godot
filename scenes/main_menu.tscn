@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://cbtmtfn8yp4cv"]
+
+[ext_resource type="FontFile" uid="uid://dxfwyoceye3sy" path="res://assets/font/Kenney Blocks.ttf" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://csunj2jc1lh3h" path="res://scripts/main_menu.gd" id="1_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://bqlndtde5xx1x" path="res://assets/textures/playerShip1_green.png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://cfn7rqusr5kds" path="res://assets/textures/asteroids_main_menu.png" id="2_oa1go"]
+[ext_resource type="Texture2D" uid="uid://dpytnbunmobfa" path="res://assets/textures/playerShip2_blue.png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://dri7rvfb13h7p" path="res://assets/textures/playerShip2_orange.png" id="4_oa1go"]
+[ext_resource type="Texture2D" uid="uid://dvg5v3g4ukw0a" path="res://assets/textures/playerShip3_red.png" id="5_tbmy8"]
+[ext_resource type="AudioStream" uid="uid://3ccepi1f0d86" path="res://assets/audio/vgm-scifi-doom.mp3" id="8_tbmy8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vue75"]
+font = ExtResource("1_l6cm7")
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_l6cm7"]
+font = ExtResource("1_l6cm7")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_rtw2f"]
+font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="MainMenu" type="Control" unique_id=1436138481]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rtw2f")
+
+[node name="Background" type="TextureRect" parent="." unique_id=547664321]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_oa1go")
+
+[node name="Title" type="Label" parent="." unique_id=1058410819]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_right = 270.0
+offset_bottom = 120.0
+grow_horizontal = 2
+text = "ASTEROIDS"
+label_settings = SubResource("LabelSettings_vue75")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SelectShipLabel" type="Label" parent="." unique_id=697940002]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = -148.0
+offset_right = 251.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SELECT YOUR SHIP"
+label_settings = SubResource("LabelSettings_l6cm7")
+horizontal_alignment = 1
+
+[node name="ShipSelection" type="HBoxContainer" parent="." unique_id=1685040419]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Ship1Button" type="TextureButton" parent="ShipSelection" unique_id=834088]
+layout_mode = 2
+texture_normal = ExtResource("2_8ln24")
+
+[node name="Ship2Button" type="TextureButton" parent="ShipSelection" unique_id=151633326]
+layout_mode = 2
+texture_normal = ExtResource("3_rtw2f")
+
+[node name="Ship3Button" type="TextureButton" parent="ShipSelection" unique_id=511992335]
+layout_mode = 2
+texture_normal = ExtResource("4_oa1go")
+
+[node name="Ship4Button" type="TextureButton" parent="ShipSelection" unique_id=1839835758]
+layout_mode = 2
+texture_normal = ExtResource("5_tbmy8")
+
+[node name="SelectionArrow" type="Label" parent="." unique_id=1552227126]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "▼"
+label_settings = SubResource("LabelSettings_rtw2f")
+horizontal_alignment = 1
+
+[node name="StartGameButton" type="Button" parent="." unique_id=129088324]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -187.5
+offset_top = -230.0
+offset_right = 187.5
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.22352941, 1, 0.078431375, 1)
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxFlat_rtw2f")
+text = "START GAME"
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="." unique_id=1073685762]
+stream = ExtResource("8_tbmy8")
+volume_db = 5.0
+autoplay = true
+
+[connection signal="pressed" from="ShipSelection/Ship1Button" to="." method="_on_ship_1_button_pressed"]
+[connection signal="pressed" from="ShipSelection/Ship2Button" to="." method="_on_ship_2_button_pressed"]
+[connection signal="pressed" from="ShipSelection/Ship3Button" to="." method="_on_ship_3_button_pressed"]
+[connection signal="pressed" from="ShipSelection/Ship4Button" to="." method="_on_ship_4_button_pressed"]
+[connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]

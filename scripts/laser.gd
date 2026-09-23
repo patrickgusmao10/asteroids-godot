@@ -4,6 +4,18 @@ extends Area2D
 
 var movement_vector := Vector2(0, -1)
 
+@onready var sprite = $Sprite2D
+
+var laser_textures = [
+	preload("res://assets/textures/laserGreen11.png"),
+	preload("res://assets/textures/laserBlue05.png"),
+	preload("res://assets/textures/laserRed16.png"),
+	preload("res://assets/textures/laserRed10.png")
+]
+
+func _ready():
+	sprite.texture = laser_textures[GameData.selected_ship]
+
 func _physics_process(delta):
 	global_position += movement_vector.rotated(rotation) * speed * delta
 

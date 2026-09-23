@@ -12,11 +12,20 @@ signal died
 @onready var cshape = $CollisionShape2D
 
 var laser_scene = preload("res://scenes/laser.tscn")
+var ship_textures = [
+	preload("res://assets/textures/playerShip1_green.png"),
+	preload("res://assets/textures/playerShip2_blue.png"),
+	preload("res://assets/textures/playerShip2_orange.png"),
+	preload("res://assets/textures/playerShip3_red.png")
+]
 
 var shoot_cd = false
 var rate_of_fire = 0.11
 
 var alive := true
+
+func _ready():
+	sprite.texture = ship_textures[GameData.selected_ship]
 
 func _process(delta):
 	if !alive: return
