@@ -2,7 +2,7 @@
 
 A recreation and expansion of the classic **Asteroids** arcade experience, built from scratch using **Godot 4** and **GDScript**.
 
-The project started as a hands-on game development study focused on recreating the fundamentals of Asteroids and has since evolved into a more complete arcade experience featuring spaceship selection, infinite waves, progressive difficulty, multiple asteroid variations, ship-specific lasers, music, UI systems, scoring, lives and game state management.
+The project started as a hands-on game development study focused on recreating the fundamentals of Asteroids and has evolved into a more complete arcade experience featuring spaceship selection, infinite waves, progressive difficulty, mini-boss battles, UFOs, defensive and offensive abilities, pickups, persistent records, custom UI systems, music, sound effects and multiple playable releases.
 
 > 🎮 Originally recreated from scratch while following [How To Make Asteroids in Godot 4 (Complete Tutorial)](https://www.youtube.com/watch?v=FmIo8iBV1W8), and later expanded with new systems, mechanics and original improvements.
 
@@ -10,22 +10,49 @@ The project started as a hands-on game development study focused on recreating t
 
 ## 🎮 Play the Game
 
-### 🚀 Version 2 — Latest
+### ⚡ Version 3 — Latest
+
+### [▶️ PLAY VERSION 3](https://patrickgusmao10.github.io/asteroids-godot/v3/)
+
+Version 3 is the most complete version of the project, expanding the infinite-wave gameplay with new enemies, abilities, pickups, progression systems and quality-of-life improvements.
+
+#### ✨ What's New in Version 3
+
+- 👾 **Mini-Boss Battles** — Face increasingly challenging mini-bosses throughout the run.
+- 🛸 **UFO Enemies** — UFOs periodically appear during waves as additional threats.
+- 🛡️ **Energy Shield** — Activate a rechargeable defensive shield capable of protecting the spaceship from incoming threats.
+- ⚡ **Special Attack** — Charge a special energy meter and unleash a powerful rapid-fire spinning attack.
+- 🔋 **Special Energy System** — Destroy enemies and asteroids to progressively charge the special ability.
+- ⚡ **Special Energy Pickups** — Collect energy pickups to instantly recharge the special ability when it is not already full.
+- ❤️ **Life Pickups** — Recover lost lives by collecting life pickups during waves.
+- 🏆 **Enemy Bonus Scores** — UFOs and mini-bosses award additional score when defeated.
+- 📈 **High Score System** — Track the player's best scores.
+- 🌊 **Highest Wave Record** — The highest wave reached is stored between runs.
+- ⏸️ **Pause Menu** — Pause gameplay and resume or return to the main menu.
+- 🔇 **Mute Control** — Toggle game audio during gameplay.
+- 🎮 **Controls Screen** — View the complete control scheme directly from the main menu.
+- 🎯 **Custom Cursor** — A custom pixel-art cursor complements the game's visual identity.
+- ✨ **Visual Polish** — Additional background effects and visual feedback improve the arcade presentation.
+- 🔊 **Expanded Audio** — Additional sound effects provide feedback for new gameplay mechanics.
+
+---
+
+### 🚀 Version 2
 
 ### [▶️ PLAY VERSION 2](https://patrickgusmao10.github.io/asteroids-godot/v2/)
 
-The latest version expands the original Asteroids experience with new gameplay systems, progression and customization.
+Version 2 introduced the first major expansion beyond the original recreation.
 
-#### ✨ What's New in Version 2
+#### ✨ Version 2 Highlights
 
-- 🎮 **Main Menu** — A new starting menu introduces the game before entering the action.
-- 🚀 **Spaceship Selection** — Choose between different spaceships before starting a run.
-- 🎵 **Menu Music** — The main menu now features its own soundtrack.
-- ☄️ **New Asteroids** — Additional asteroid types and visual variations have been added.
-- 🌊 **Infinite Wave System** — Survive through endless waves of asteroids.
-- ⚡ **Progressive Difficulty** — Asteroids become faster as the waves progress.
-- ☄️ **Increasing Asteroid Count** — Each new wave introduces more asteroids to survive.
-- 🔫 **Ship-Specific Lasers** — Each spaceship fires its own matching laser style.
+- 🎮 **Main Menu**
+- 🚀 **Spaceship Selection**
+- 🎵 **Menu Music**
+- ☄️ **New Asteroid Variations**
+- 🌊 **Infinite Wave System**
+- ⚡ **Progressive Difficulty**
+- ☄️ **Increasing Asteroid Count**
+- 🔫 **Ship-Specific Lasers**
 
 ---
 
@@ -35,7 +62,7 @@ The latest version expands the original Asteroids experience with new gameplay s
 
 Play the original version of the project featuring the core Asteroids gameplay that started the development journey.
 
-Both versions run directly in your browser — no installation required.
+All three versions run directly in your browser — no installation required.
 
 ---
 
@@ -45,7 +72,13 @@ The goal of this project is to recreate and expand an Asteroids-style arcade gam
 
 Instead of importing a finished project, the original game was recreated step by step from an empty Godot project, implementing the scenes, scripts, resources, physics and gameplay systems throughout the development process.
 
-After completing the original version, development continued with **Version 2**, introducing new systems and mechanics beyond the initial recreation.
+After completing the original version, development continued through multiple releases:
+
+**Version 1** established the core Asteroids gameplay.
+
+**Version 2** expanded the project with spaceship selection, additional asteroid variations, infinite waves, progressive difficulty and ship-specific weapons.
+
+**Version 3** significantly expands the combat and progression systems with mini-bosses, UFOs, shield mechanics, special abilities, pickups, persistent records and additional gameplay polish.
 
 The project now includes concepts such as:
 
@@ -56,15 +89,43 @@ The project now includes concepts such as:
 - ☄️ Multiple asteroid variations
 - 💥 Collision detection
 - ❤️ Player lives
+- ❤️ Life pickups
 - 🏆 Score system
+- 📈 High scores
+- 🌊 Highest wave tracking
 - 🌊 Infinite wave progression
 - ⚡ Progressive difficulty
+- 👾 Mini-boss encounters
+- 🛸 UFO enemies
+- 🛡️ Rechargeable shield
+- ⚡ Special attack
+- 🔋 Special energy system
+- ⚡ Special energy pickups
 - 🎮 Main menu
+- 🎮 Controls screen
+- ⏸️ Pause menu
+- 🔇 Audio mute control
+- 🎯 Custom cursor
 - 🎵 Menu music
 - 🔄 Player respawning
 - 🎮 Game over system
 - 🌌 2D space environment
 - 🔊 Game audio and sound effects
+
+---
+
+## 🎮 Controls
+
+| Key | Action |
+|---|---|
+| `W / S` | Move Forward / Backward |
+| `A / D` | Rotate Left / Right |
+| `SPACE` | Shoot |
+| `SHIFT` | Shield |
+| `E` | Special Attack |
+| `M` | Mute / Unmute |
+| `ESC` | Pause |
+| `R` | Return to Main Menu |
 
 ---
 
@@ -80,68 +141,98 @@ The project now includes concepts such as:
 
 ## 🧩 Game Architecture
 
-The project follows Godot's scene-based architecture, separating the main gameplay systems into independent scenes and scripts.
+The project follows Godot's scene-based architecture, separating gameplay systems into independent scenes and scripts.
 
-The game uses **signals, scene instantiation, collision detection, physics processing and state management** to connect the player, lasers, asteroids, HUD, menus and overall game flow.
+The game uses **signals, scene instantiation, collision detection, physics processing and state management** to connect the player, enemies, projectiles, pickups, HUD, menus and overall game flow.
 
-Version 2 expands the original architecture with additional systems responsible for spaceship selection, game configuration and wave progression.
+Version 3 expands the architecture considerably by introducing dedicated systems for:
+
+- Mini-boss encounters
+- UFO enemies
+- Enemy projectiles
+- Shield interactions
+- Special attacks
+- Energy management
+- Life pickups
+- Special energy pickups
+- Persistent high scores
+- Highest wave tracking
+- Pause management
+- Controls UI
 
 ---
 
 ### 🎮 Main Menu
 
-Version 2 introduces a dedicated main menu that acts as the entry point for the game.
+The main menu acts as the entry point for the game.
 
-The menu allows the player to prepare a run before entering the main gameplay scene and introduces the new spaceship selection system.
+Players can select their spaceship before starting a run, access the high-score screen and view the game's controls.
 
-It also includes its own background music, separating the menu experience from the main gameplay.
+The menu also includes its own background music and custom visual presentation.
 
 ---
 
 ### 🚀 Spaceship Selection
 
-Before starting the game, the player can choose between different spaceship designs.
+Before starting the game, the player can choose between four spaceship designs.
 
 The selected ship is carried into the gameplay session and determines the visual appearance of the player's spaceship.
 
-Each ship also uses a matching laser style, giving the available ships their own visual identity during gameplay.
+Each ship also uses a matching laser style, giving every selectable spaceship its own visual identity.
 
 ---
 
 ### 🚀 Player Controller — `player.gd`
 
-The player controller handles spaceship movement, acceleration, rotation, shooting and screen wrapping.
+The player controller handles:
 
-```gdscript
-velocity += input_vector.rotated(rotation) * acceleration
+- Movement
+- Acceleration
+- Rotation
+- Shooting
+- Screen wrapping
+- Shield activation
+- Shield energy
+- Special energy
+- Special attack
+- Invincibility
+- Death
+- Respawning
 
-velocity = velocity.limit_length(max_speed)
+Movement uses acceleration and velocity limiting to reproduce the momentum-based movement associated with Asteroids.
 
-if Input.is_action_pressed("rotate_right"):
-    rotate(deg_to_rad(rotation_speed * delta))
+The shield consumes energy while active and automatically recharges while inactive.
 
-if Input.is_action_pressed("rotate_left"):
-    rotate(deg_to_rad(-rotation_speed * delta))
+The special ability becomes available after reaching maximum special energy. Activating it causes the spaceship to rotate rapidly while automatically firing special projectiles for a limited duration.
 
-if input_vector.y == 0:
-    velocity = velocity.move_toward(Vector2.ZERO, 3)
+---
 
-move_and_slide()
-```
+### 🛡️ Shield System
 
-The spaceship can fire lasers by instantiating the configured laser scene and passing it to the game through signals.
+Version 3 introduces a rechargeable shield.
 
-```gdscript
-func shoot_laser():
-    var l = laser_scene.instantiate()
+While active, the shield protects the spaceship from incoming threats while continuously consuming shield energy.
 
-    l.global_position = muzzle.global_position
-    l.rotation = rotation
+When the shield is disabled, its energy gradually recharges.
 
-    emit_signal("laser_shot", l)
-```
+The shield also provides visual feedback when impacts occur.
 
-Version 2 expands this system by allowing different spaceships to use their corresponding laser styles.
+---
+
+### ⚡ Special Attack
+
+Destroying asteroids and certain enemies contributes energy toward the player's special meter.
+
+Once fully charged, the player can activate the special attack with `E`.
+
+During the ability:
+
+- The spaceship rapidly rotates.
+- Special projectiles are fired automatically.
+- The attack remains active for a limited duration.
+- The attack gradually slows before ending.
+
+Special energy pickups can immediately refill the meter when it is not already full.
 
 ---
 
@@ -149,27 +240,61 @@ Version 2 expands this system by allowing different spaceships to use their corr
 
 Asteroids are implemented as independent `Area2D` objects responsible for their own movement, rotation, collision and destruction behavior.
 
-Different asteroid sizes determine their score value and gameplay behavior.
+The game includes multiple asteroid types and sizes with different fragmentation patterns.
 
-Version 2 expands the original asteroid system with additional asteroid variations, increasing the visual variety of each wave.
+Asteroid destruction awards score and contributes energy toward the player's special ability.
 
-When an asteroid is destroyed, it emits information about the explosion before being removed from the scene.
+Larger asteroids can break into multiple smaller asteroids, increasing the amount of movement and danger present during later waves.
 
-```gdscript
-func explode():
-    emit_signal("exploded", global_position, size, points, asteroid_type)
-    queue_free()
-```
+---
 
-The Game Manager receives this signal and handles the consequences of the asteroid's destruction.
+### 👾 Mini-Boss System
+
+Version 3 introduces multiple mini-boss variants.
+
+Mini-bosses appear as additional combat challenges during wave progression and use their own movement, health and attack systems.
+
+The boss cycle changes as the player progresses, and defeating a mini-boss awards bonus score and special energy.
+
+Different mini-boss encounters provide increasing rewards based on their position in the boss cycle.
+
+---
+
+### 🛸 UFO System
+
+UFOs periodically appear during wave progression.
+
+They move independently around the arena and provide an additional target beyond the standard asteroid encounters.
+
+Destroying a UFO awards bonus score and contributes special energy to the player.
+
+---
+
+### ❤️ Life Pickups
+
+Life pickups can appear during wave progression.
+
+If the player has fewer than the maximum number of lives, collecting one restores a life.
+
+If the player already has the maximum number of lives, the pickup cannot be collected.
+
+---
+
+### ⚡ Special Energy Pickups
+
+Special energy pickups appear at random positions during wave progression.
+
+Collecting one immediately fills the special energy meter.
+
+If the special ability is already fully charged, the pickup remains available instead of being consumed.
+
+A new pickup is generated as wave progression continues.
 
 ---
 
 ### 🌊 Infinite Wave System
 
-One of the major additions in Version 2 is the **infinite wave system**.
-
-Instead of maintaining a fixed asteroid encounter, the game now progresses through continuously increasing waves.
+The game progresses through continuously increasing waves.
 
 Each completed wave leads to another wave with greater difficulty.
 
@@ -180,7 +305,24 @@ The progression system increases:
 - 🌊 The current wave number
 - 🎯 Overall survival difficulty
 
-There is no predefined final wave — the objective is to survive for as long as possible while the game continuously becomes more difficult.
+Additional enemies and pickups are integrated into the wave system, making later encounters increasingly dynamic.
+
+There is no predefined final wave — the objective is to survive for as long as possible and achieve the highest score and wave possible.
+
+---
+
+### 🏆 Score and Progress Records
+
+The game tracks score throughout each run.
+
+Destroying asteroids, UFOs and mini-bosses contributes to the final score.
+
+The game also maintains:
+
+- High-score records
+- Highest wave reached
+
+These records allow players to compare new runs against their previous performance.
 
 ---
 
@@ -194,62 +336,46 @@ Its responsibilities include:
 - Managing the current wave
 - Spawning asteroids
 - Increasing difficulty
-- Tracking the score
+- Tracking score
 - Managing player lives
+- Spawning life pickups
+- Spawning special energy pickups
+- Spawning UFOs
+- Managing mini-boss encounters
 - Handling asteroid destruction
 - Handling player death
 - Respawning the player
 - Detecting game over
 - Coordinating gameplay progression
 
-The manager receives signals from the player and asteroids and determines how those events affect the current game session.
-
-When asteroids are destroyed, the Game Manager updates the score and manages the remaining asteroid population.
-
-When all required asteroids from a wave have been cleared, the game advances to the next wave.
+Signals are used extensively to keep the individual gameplay components separated while allowing the Game Manager to coordinate their interactions.
 
 ---
 
-### 🔫 Laser System — `laser.gd`
+### 🔫 Projectile Systems
 
-Lasers are implemented as `Area2D` objects and move according to their rotation.
+The project contains multiple projectile systems.
 
-```gdscript
-@export var speed := 500.0
+Standard player lasers use the visual style associated with the selected spaceship.
 
-var movement_vector := Vector2(0, -1)
+The special ability uses dedicated special projectiles.
 
-func _physics_process(delta):
-    global_position += movement_vector.rotated(rotation) * speed * delta
-```
+Enemies such as mini-bosses can also use their own projectiles against the player.
 
-When a laser detects an asteroid, it triggers the asteroid's explosion and removes itself.
-
-```gdscript
-func _on_area_entered(area):
-    if area is Asteroid:
-        var asteroid = area
-        asteroid.explode()
-        queue_free()
-```
-
-Lasers are automatically removed after leaving the visible screen.
-
-```gdscript
-func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
-    queue_free()
-```
-
-In Version 2, the laser appearance can change according to the spaceship selected by the player.
+Projectiles interact with collision layers and gameplay systems independently depending on their purpose.
 
 ---
 
 ## 🔄 Gameplay Flow
 
-The Version 2 gameplay flow can be summarized as:
+The Version 3 gameplay flow can be summarized as:
 
 ```text
 Main Menu
+    │
+    ├── High Scores
+    │
+    ├── Controls
     │
     ▼
 Spaceship Selection
@@ -260,39 +386,50 @@ Start Game
     ▼
 Player
     │
-    ├── shoots
+    ├── Standard Laser
+    ├── Shield
+    └── Special Attack
+    │
     ▼
-Laser ──────────────► Asteroid
-                         │
-                         │ exploded signal
-                         ▼
-                    Game Manager
-                    ├── Updates score
-                    ├── Tracks asteroids
-                    ├── Manages lives
-                    ├── Handles respawn
-                    ├── Controls Game Over
-                    └── Controls Waves
-                              │
-                              ▼
-                         Wave Cleared
-                              │
-                              ▼
-                         Next Wave
-                         ├── More asteroids
-                         └── Higher speed
-                              │
-                              ▼
-                           Repeat
+Wave
+    │
+    ├── Asteroids
+    ├── Mini-Boss
+    ├── UFO
+    ├── Life Pickup
+    └── Special Energy Pickup
+    │
+    ▼
+Game Manager
+    │
+    ├── Updates Score
+    ├── Manages Lives
+    ├── Manages Enemies
+    ├── Manages Pickups
+    ├── Handles Respawn
+    ├── Tracks Wave
+    └── Detects Game Over
+    │
+    ▼
+Wave Cleared
+    │
+    ▼
+Next Wave
+    │
+    ├── More Asteroids
+    └── Higher Speed
+    │
+    ▼
+Repeat
 ```
 
-This separation keeps each gameplay component focused on its own responsibility while the **Game Manager** coordinates interactions between the systems.
+This separation keeps each gameplay component focused on its own responsibility while the **Game Manager** coordinates the overall game state.
 
 ---
 
 ## 📁 Project Structure
 
-The project is organized around Godot scenes, scripts, resources, game assets and web builds.
+The project is organized around Godot scenes, scripts, resources, game assets and versioned builds.
 
 ```text
 asteroids-godot/
@@ -306,33 +443,55 @@ asteroids-godot/
 │   ├── v1/
 │   │   └── Web build — Version 1
 │   │
-│   └── v2/
-│       └── Web build — Version 2
+│   ├── v2/
+│   │   └── Web build — Version 2
+│   │
+│   └── v3/
+│       └── Web build — Version 3
 │
 ├── resources/
 │
 ├── scenes/
 │   ├── asteroid.tscn
+│   ├── enemy_laser.tscn
 │   ├── explosion.tscn
 │   ├── game.tscn
 │   ├── game_over_screen.tscn
+│   ├── high_scores.tscn
 │   ├── hud.tscn
 │   ├── laser.tscn
+│   ├── life_pickup.tscn
 │   ├── main_menu.tscn
+│   ├── mini_boss.tscn
+│   ├── mini_boss_explosion.tscn
+│   ├── pause_menu.tscn
 │   ├── player.tscn
-│   └── player_spawn_area.tscn
+│   ├── special_laser.tscn
+│   ├── special_pickup.tscn
+│   ├── twinkle_star.tscn
+│   ├── ufo.tscn
+│   └── ufo_explosion.tscn
 │
 ├── scripts/
 │   ├── asteroid.gd
+│   ├── enemy_laser.gd
 │   ├── explosion.gd
 │   ├── game.gd
 │   ├── game_data.gd
 │   ├── game_over_screen.gd
+│   ├── high_scores.gd
 │   ├── hud.gd
 │   ├── laser.gd
+│   ├── life_pickup.gd
 │   ├── main_menu.gd
+│   ├── mini_boss.gd
+│   ├── mini_boss_explosion.gd
+│   ├── pause_menu.gd
 │   ├── player.gd
-│   └── player_spawn_area.gd
+│   ├── special_laser.gd
+│   ├── special_pickup.gd
+│   ├── ufo.gd
+│   └── ufo_explosion.gd
 │
 ├── project.godot
 ├── export_presets.cfg
@@ -342,7 +501,10 @@ asteroids-godot/
 The `docs` directory contains the browser-playable builds used by GitHub Pages.
 
 - `docs/v1/` preserves the original release.
-- `docs/v2/` contains the latest Version 2 release.
+- `docs/v2/` preserves Version 2.
+- `docs/v3/` contains the latest Version 3 release.
+
+This allows every major release to remain independently playable.
 
 ---
 
@@ -378,7 +540,11 @@ project.godot
 
 ## 🌐 Web Versions
 
-The repository also contains exported Web builds that can be played directly through GitHub Pages.
+The repository contains versioned Web builds that can be played directly through GitHub Pages.
+
+### Version 3 — Latest
+
+[Play Version 3](https://patrickgusmao10.github.io/asteroids-godot/v3/)
 
 ### Version 2
 
@@ -388,7 +554,7 @@ The repository also contains exported Web builds that can be played directly thr
 
 [Play Version 1](https://patrickgusmao10.github.io/asteroids-godot/v1/)
 
-This allows the evolution of the project to remain playable instead of replacing the original version whenever a major update is released.
+Keeping each major version available makes it possible to follow the evolution of the project instead of replacing previous releases whenever a major update is published.
 
 ---
 
@@ -401,18 +567,27 @@ Through this project, I practiced:
 - 2D physics
 - Player input handling
 - Collision detection
+- Collision layers and masks
 - Scene instantiation
 - Signals
 - UI development
 - Menu systems
 - Game state management
-- Persistent game configuration between scenes
+- Persistent game data
 - Wave-based gameplay systems
 - Progressive difficulty
+- Enemy systems
+- Boss encounters
+- Projectile systems
+- Energy-based abilities
+- Defensive mechanics
+- Pickup systems
 - Multiple player configurations
 - Resource organization
 - Audio integration
+- Visual feedback
 - Web export with Godot
+- Windows export with Godot
 - Versioned Web builds
 - Git version control
 - GitHub Pages deployment
@@ -434,9 +609,9 @@ The first release established the core Asteroids gameplay:
 - Game over
 - Sound effects
 
-### ✅ Version 2 — Current Release
+### ✅ Version 2
 
-Version 2 expands the game with:
+Version 2 expanded the game with:
 
 - 🎮 Main menu
 - 🚀 Spaceship selection
@@ -447,17 +622,32 @@ Version 2 expands the game with:
 - ☄️ Increasing asteroid count
 - 🔫 Ship-specific lasers
 
-### 🚧 Next Version
+### ✅ Version 3 — Current Release
 
-Development continues beyond Version 2.
+Version 3 expands the project into a more complete arcade experience with:
 
-The next planned release will introduce new combat mechanics and additional challenges:
+- 👾 Mini-boss encounters
+- 🛸 UFO enemies
+- 🛡️ Rechargeable shield
+- ⚡ Special attack
+- 🔋 Special energy system
+- ❤️ Life pickups
+- ⚡ Special energy pickups
+- 🏆 Expanded scoring
+- 📈 High-score tracking
+- 🌊 Highest-wave tracking
+- ⏸️ Pause system
+- 🔇 Mute control
+- 🎮 Controls screen
+- 🎯 Custom cursor
+- ✨ Additional visual polish
+- 🔊 Expanded sound effects
 
-- 👾 **Mini-Boss Battles** — A mini-boss will appear every 5 waves, adding a new combat challenge to the progression system.
-- 🛡️ **Shield Power-Up** — A defensive ability that protects the player's spaceship from incoming damage.
-- 🚀 **Homing Missile Power-Up** — A guided missile capable of tracking its target automatically.
+### 🔭 Future Development
 
-More gameplay mechanics, balancing improvements and visual enhancements are planned as the project continues to evolve.
+Version 3 represents the current feature-complete release of the project.
+
+Future development may focus on additional balancing, visual polish and gameplay experimentation rather than a predefined next release.
 
 ---
 
@@ -475,9 +665,9 @@ GitHub: **patrickgusmao10**
 
 This repository documents the evolution of my learning process with **Godot 4** and game development.
 
-The project began as a recreation of the classic Asteroids gameplay and continues to evolve through new versions, mechanics and gameplay systems.
+The project began as a recreation of the classic Asteroids gameplay and evolved through multiple releases with increasingly complex gameplay systems.
 
-Both the original release and the latest version remain available to play, making it possible to follow the project's progression over time.
+Versions 1, 2 and 3 remain available to play, making it possible to directly experience the project's progression over time.
 
 If you enjoyed the project, feel free to explore the source code and follow its future improvements.
 

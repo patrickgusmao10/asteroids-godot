@@ -116,36 +116,138 @@ visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "▼"
+text = "▼ "
 label_settings = SubResource("LabelSettings_rtw2f")
 horizontal_alignment = 1
 
 [node name="StartGameButton" type="Button" parent="." unique_id=129088324]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.25
+offset_top = 70.0
+offset_right = 190.25
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.22352941, 1, 0.078431375, 1)
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_rtw2f")
+text = "START GAME"
+
+[node name="HighScoreButton" type="Button" parent="." unique_id=1143425270]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -187.5
-offset_top = -230.0
-offset_right = 187.5
-offset_bottom = -139.0
+offset_left = -211.0
+offset_top = -194.0
+offset_right = 211.0
+offset_bottom = -109.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_hover_color = Color(0.22352941, 1, 0.078431375, 1)
+theme_override_colors/font_hover_color = Color(1, 0.31, 0.07999998, 1)
 theme_override_fonts/font = ExtResource("1_l6cm7")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = SubResource("StyleBoxFlat_rtw2f")
-text = "START GAME"
+text = "HIGH SCORES"
 
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="." unique_id=1073685762]
 stream = ExtResource("8_tbmy8")
 volume_db = 5.0
 autoplay = true
 
+[node name="ControlsButton" type="Button" parent="." unique_id=1583561708]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -166.5
+offset_top = -100.0
+offset_right = 166.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.21176471, 0.73333335, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 50
+text = "CONTROLS"
+
+[node name="ControlsPanel" type="Control" parent="." unique_id=1896686197]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ControlsTitle" type="Label" parent="ControlsPanel" unique_id=1116652855]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.5
+offset_right = 42.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 50
+text = "CONTROLS"
+
+[node name="ControlsList" type="Label" parent="ControlsPanel" unique_id=1222499492]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -106.5
+offset_right = 82.0
+offset_bottom = 106.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 35
+text = "W / S OR ARROWS  -  MOVE
+A / D OR ARROWS  -  ROTATE
+SPACE   -   SHOOT
+SHIFT   -   SHIELD
+E   -   SPECIAL
+M   -   MUTE
+ESC   -   PAUSE
+R   -   MAIN MENU"
+
+[node name="BackButton" type="Button" parent="ControlsPanel" unique_id=1705628223]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -31.0
+offset_right = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
 [connection signal="pressed" from="ShipSelection/Ship1Button" to="." method="_on_ship_1_button_pressed"]
 [connection signal="pressed" from="ShipSelection/Ship2Button" to="." method="_on_ship_2_button_pressed"]
 [connection signal="pressed" from="ShipSelection/Ship3Button" to="." method="_on_ship_3_button_pressed"]
 [connection signal="pressed" from="ShipSelection/Ship4Button" to="." method="_on_ship_4_button_pressed"]
 [connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="HighScoreButton" to="." method="_on_high_score_button_pressed"]
+[connection signal="pressed" from="ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="ControlsPanel/BackButton" to="." method="_on_back_button_pressed"]

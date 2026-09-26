@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dojien6mfoopu"]
+
+[ext_resource type="Script" uid="uid://bwc1wfhqgr4uc" path="res://scripts/enemy_laser.gd" id="1_dpym3"]
+[ext_resource type="Texture2D" uid="uid://bsxsgcjxjyh5s" path="res://assets/textures/enemylaser4.png" id="2_dpym3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xmihv"]
+radius = 12.499998
+height = 144.99998
+
+[node name="EnemyLaser" type="Area2D" unique_id=147500574]
+scale = Vector2(0.4, 0.4)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_dpym3")
+
+[node name="EnemyLaserSprite" type="Sprite2D" parent="." unique_id=1312162011]
+texture = ExtResource("2_dpym3")
+
+[node name="EnemyLaserCollision" type="CollisionShape2D" parent="." unique_id=2080351869]
+position = Vector2(-12.499998, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_xmihv")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1009474009]
+position = Vector2(-7.499999, -7.5)
+rect = Rect2(-35, 0, 70, 13.333)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -27,3 +27,6 @@ func _on_area_entered(area):
 		var asteroid = area
 		asteroid.explode()
 		queue_free()
+	elif area.has_method("take_damage"):
+		area.take_damage()
+		queue_free()

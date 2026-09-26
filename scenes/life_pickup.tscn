@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dttyqhhawovd7"]
+
+[ext_resource type="Script" uid="uid://c75rsadykbtfi" path="res://scripts/life_pickup.gd" id="1_8ojex"]
+[ext_resource type="Texture2D" uid="uid://ca1umvgqixg78" path="res://assets/textures/pill_yellow.png" id="1_rafur"]
+[ext_resource type="AudioStream" uid="uid://bpfprh3h6bfg5" path="res://assets/audio/sfx_twoTone.ogg" id="3_qoiy4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rafur"]
+radius = 6.363961
+height = 25.455847
+
+[node name="LifePickup" type="Area2D" unique_id=1155109714]
+collision_mask = 2
+script = ExtResource("1_8ojex")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1075300424]
+texture = ExtResource("1_rafur")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=723485964]
+rotation = 0.7853982
+shape = SubResource("CapsuleShape2D_rafur")
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="." unique_id=860804074]
+stream = ExtResource("3_qoiy4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

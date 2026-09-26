@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://6h6nktvcoddi"]
+
+[ext_resource type="Texture2D" uid="uid://cgwacpdn2l26o" path="res://assets/textures/ufo_explosion.png" id="1_rb5me"]
+[ext_resource type="Script" uid="uid://ft1mbedcmtou" path="res://scripts/ufo_explosion.gd" id="2_77ev3"]
+[ext_resource type="AudioStream" uid="uid://cujl5lj5h4lrs" path="res://assets/audio/explosion.mp3" id="3_u166t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77ev3"]
+atlas = ExtResource("1_rb5me")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u166t"]
+atlas = ExtResource("1_rb5me")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hslnq"]
+atlas = ExtResource("1_rb5me")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wiqh3"]
+atlas = ExtResource("1_rb5me")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we8ci"]
+atlas = ExtResource("1_rb5me")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncv04"]
+atlas = ExtResource("1_rb5me")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6bqj"]
+atlas = ExtResource("1_rb5me")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8hls6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77ev3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u166t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hslnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wiqh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we8ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncv04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6bqj")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 12.0
+}]
+
+[node name="UFOExplosion" type="AnimatedSprite2D" unique_id=813479662]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_8hls6")
+animation = &"explode"
+autoplay = "explode"
+frame = 6
+frame_progress = 1.0
+script = ExtResource("2_77ev3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1545008936]
+stream = ExtResource("3_u166t")

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cxftdbnv1t6b5"]
+
+[ext_resource type="Script" uid="uid://bd366lix5xq4d" path="res://scripts/special_pickup.gd" id="1_c1iqc"]
+[ext_resource type="Texture2D" uid="uid://okrk0oj5pngx" path="res://assets/textures/powerupSpecial.png" id="1_kr1mt"]
+[ext_resource type="AudioStream" uid="uid://bpfprh3h6bfg5" path="res://assets/audio/sfx_twoTone.ogg" id="2_3cfgp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kr1mt"]
+size = Vector2(31, 31)
+
+[node name="SpecialPickup" type="Area2D" unique_id=1515473668]
+collision_mask = 2
+script = ExtResource("1_c1iqc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564235206]
+texture = ExtResource("1_kr1mt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=694701582]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_kr1mt")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1663909256]
+stream = ExtResource("2_3cfgp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

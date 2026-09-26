@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bo4x2s8dqx8vx" path="res://scenes/hud.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://vcpj0eed7j0t" path="res://scenes/game_over_screen.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://7ygmy5j4e3kq" path="res://scenes/asteroid.tscn" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://creq0apxn0cm" path="res://scripts/pause_menu.gd" id="4_dinhu"]
+[ext_resource type="FontFile" uid="uid://dxfwyoceye3sy" path="res://assets/font/Kenney Blocks.ttf" id="4_kvpfn"]
+[ext_resource type="FontFile" uid="uid://d3dcm3fnoyp43" path="res://assets/font/Gravoxa-Regular.ttf" id="6_kvuet"]
 [ext_resource type="PackedScene" uid="uid://c1a4pgxeuamek" path="res://scenes/player_spawn_area.tscn" id="6_p57ef"]
 [ext_resource type="AudioStream" uid="uid://3uum7rkqrdlc" path="res://assets/audio/sfx_laser1.ogg" id="7_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://xv5klreybs21" path="res://assets/audio/Destroy.wav" id="8_gee14"]
@@ -51,6 +54,68 @@ script = ExtResource("1_yqjtg")
 
 [node name="GameOverScreen" parent="UI" unique_id=84261874 instance=ExtResource("3_iywne")]
 visible = false
+
+[node name="PauseMenu" type="Control" parent="UI" unique_id=583974430]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_dinhu")
+
+[node name="Background" type="ColorRect" parent="UI/PauseMenu" unique_id=1142561660]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.09803922)
+
+[node name="PausedLabel" type="Label" parent="UI/PauseMenu" unique_id=1130490132]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 270.0
+offset_right = 713.0
+offset_bottom = 309.0
+theme_override_fonts/font = ExtResource("4_kvpfn")
+theme_override_font_sizes/font_size = 25
+text = "PAUSED"
+
+[node name="ResumeButton" type="Button" parent="UI/PauseMenu" unique_id=700948746]
+layout_mode = 0
+offset_left = 589.0
+offset_top = 342.0
+offset_right = 716.0
+offset_bottom = 389.0
+theme_override_fonts/font = ExtResource("4_kvpfn")
+theme_override_font_sizes/font_size = 25
+text = "RESUME"
+
+[node name="MainMenuButton" type="Button" parent="UI/PauseMenu" unique_id=2012512580]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 420.0
+offset_right = 747.0
+offset_bottom = 467.0
+theme_override_fonts/font = ExtResource("4_kvpfn")
+theme_override_font_sizes/font_size = 25
+text = "MAIN MENU"
+
+[node name="MutedLabel" type="Label" parent="UI" unique_id=1749228099]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -57.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("6_kvuet")
+theme_override_font_sizes/font_size = 10
+text = "MUTED"
+horizontal_alignment = 2
 
 [node name="BackGroundStarFields" type="Node2D" parent="." unique_id=1272956423]
 
@@ -113,6 +178,7 @@ position = Vector2(1079, 366)
 position = Vector2(640, 360)
 
 [node name="PlayerSpawnArea" parent="PlayerSpawnPos" unique_id=277647873 instance=ExtResource("6_p57ef")]
+collision_mask = 36
 
 [node name="LaserSound" type="AudioStreamPlayer2D" parent="." unique_id=1214953676]
 position = Vector2(549, 1853)
@@ -128,3 +194,8 @@ stream = ExtResource("9_0tnpc")
 
 [node name="NextWave" type="AudioStreamPlayer2D" parent="." unique_id=334694870]
 stream = ExtResource("10_vtaks")
+
+[node name="TwinkleStars" type="Node2D" parent="." unique_id=1263869489]
+
+[connection signal="pressed" from="UI/PauseMenu/ResumeButton" to="UI/PauseMenu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="UI/PauseMenu/MainMenuButton" to="UI/PauseMenu" method="_on_main_menu_button_pressed"]

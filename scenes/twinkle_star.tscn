@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cnpaigmio4g6l"]
+
+[ext_resource type="Texture2D" uid="uid://bml0be5kdoxnv" path="res://assets/textures/star3.png" id="1_eqt7y"]
+[ext_resource type="Texture2D" uid="uid://cvqddb7btho6a" path="res://assets/textures/star2.png" id="2_jnyrn"]
+[ext_resource type="Texture2D" uid="uid://dvq6owrbbbubt" path="res://assets/textures/star1.png" id="3_l07qj"]
+
+[sub_resource type="Animation" id="Animation_jnyrn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_eqt7y")]
+}
+
+[sub_resource type="Animation" id="Animation_eqt7y"]
+resource_name = "twinkle"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.45, 0.45), Vector2(1, 1), Vector2(0.45, 0.45)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_eqt7y"), ExtResource("2_jnyrn"), ExtResource("3_l07qj"), ExtResource("2_jnyrn"), ExtResource("1_eqt7y")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jnyrn"]
+_data = {
+&"RESET": SubResource("Animation_jnyrn"),
+&"twinkle": SubResource("Animation_eqt7y")
+}
+
+[node name="TwinkleStar" type="Sprite2D" unique_id=954042849]
+texture = ExtResource("1_eqt7y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1126960106]
+libraries/ = SubResource("AnimationLibrary_jnyrn")
+autoplay = &"twinkle"
